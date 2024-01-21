@@ -327,34 +327,36 @@ body {
 }
 
 
-@media (max-height:480px) and (max-width:2040px){
+@media (max-height:480px) and (max-width:2040px) {
 
 
 
-    .main{
+    .main {
         height: 110%;
         margin-top: 5%;
     }
-    .analog{
-        width:150px ;
+
+    .analog {
+        width: 150px;
         height: 150px;
         margin-bottom: 30px;
     }
 
     .hour-number span p {
         font-size: 80%;
-     
+
     }
 
-    .time{
+    .time {
         margin-top: 10px;
         height: 100vh;
     }
+
     .clock-center {
-       
+
         height: 115%;
         width: 115%;
-       
+
     }
 
 
