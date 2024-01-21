@@ -9,16 +9,21 @@ body {
     width: 100vw;
     height: 100%;
 
+
 }
 
 
 .main {
+    margin: 0 auto;
     height: 100%;
-    width: 100%;
-    background: radial-gradient(orange 10%, rgb(255, 81, 0));
+    width: 80%;
+    background: rgb(252, 252, 252);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border-left: 2px solid #64636322;
+    border-right: 2px solid #64636322;
+
 }
 
 .time {
@@ -27,8 +32,12 @@ body {
     justify-content: space-around;
     align-items: center;
     width: 40vw;
-    min-height: 90vh;
-    background-color: rgb(0, 255, 38);
+    height: 90vh;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    background: linear-gradient(white, #64636322);
+
 }
 
 
@@ -37,8 +46,9 @@ body {
     position: relative;
     width: 35vh;
     min-height: 35vh;
-    background-color: rgb(255, 145, 0);
-    /* border-radius: 50%; */
+    background-color: rgb(255, 255, 255);
+    /* border: 10px solid white; */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,35 +58,35 @@ body {
 
 
 /*          Lines        */
-.lines{
+.lines {
     width: 100%;
     height: 100%;
     position: absolute;
 
 }
 
-.lines span{
+.lines span {
     position: absolute;
     width: 100%;
     height: 100%;
     transform: rotate(calc(var(--line-index)*6deg));
-    
     text-align: center;
 }
 
 
-.lines p{
+.lines p {
     display: inline-block;
     width: 1%;
-    height: 5%;
-    background-color: rgb(2, 17, 17);
+    height: 4%;
+    background-color: rgb(91, 91, 91);
+
 }
 
 
-.lines span:nth-child(5n) p{
+.lines span:nth-child(5n) p {
 
     width: 2%;
-    height: 7%;
+    height: 5%;
     border-radius: 0% 0% 50% 50%;
     transform: translateY(-6%);
 }
@@ -88,12 +98,14 @@ body {
 .hour-number span {
     transform: rotate(calc(var(--index)*30deg));
     position: absolute;
-    inset: 1rem;
+    inset: 5%;
     text-align: center;
 }
 
 .hour-number span p {
-    font-size: 1.2rem;
+    font-size: 140%;
+    font-weight: bold;
+    margin: 2px;
     transform: rotate(calc(var(--index)*-30deg))
 }
 
@@ -105,10 +117,30 @@ body {
 
 .clock-center {
     position: absolute;
-    height: rem;
-    width: rem;
-    background-color: rgb(247, 247, 247);
+    height: 115%;
+    width: 115%;
+    filter: drop-shadow(0px 0px 3px rgb(104, 103, 103));
+    border: 10px solid rgb(230, 230, 230);
     border-radius: 50%;
+}
+
+.clock-center2 {
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    filter: drop-shadow(0px 0px 3px rgb(104, 103, 103));
+    background-color: black;
+    border-radius: 50%;
+}
+
+.clock-center3 {
+    position: absolute;
+    height: 5%;
+    width: 5%;
+    z-index: 2;
+    background-color: #646363;
+    border-radius: 50%;
+
 }
 
 
@@ -130,77 +162,60 @@ body {
 .seconds-hand {
     position: absolute;
     transform-origin: bottom;
-    border-radius: 50%;
+    border-radius: 100%;
     bottom: 50%;
 
 }
 
 .minutes-hand {
-    height: 7rem;
-    width: 0.5rem;
-    background-color: aqua;
+    height: 44%;
+    width: 2.5%;
+    background-color: rgb(0, 0, 0);
 
     transform: rotate(20deg);
 }
 
 .hours-hand {
-    height: 4rem;
-    width: 0.5rem;
-    background-color: rgb(229, 255, 0);
-
+    height: 29%;
+    width: 2.2%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
     transform: rotate(120deg);
 }
 
 .seconds-hand {
-    height: 7rem;
-    width: 0.2rem;
-    background-color: rgb(255, 255, 255);
+    height: 50%;
+    width: 1%;
+    background-color: #646363;
     /* transform: rotate(90deg); */
 }
 
 .seconds-hand::before {
     content: "";
     position: absolute;
-    height: 3rem;
-    width: 0.2rem;
-    top: 60%;
-    background-color: rgb(255, 255, 255);
+    height: 30%;
+    width: 100%;
+    top: 70%;
+    background-color: #646363;
     transform: rotate(180deg);
     transform-origin: bottom;
     border-radius: 50%;
 
 }
 
-.seconds-hand::after {
-    content: "";
-    position: absolute;
-    height: 0.9rem;
-    width: 0.9rem;
-    background-color: rgb(13, 10, 10);
-    top: 100%;
-    left: 50%; /* Center the pseudo-element horizontally */
-    transform: translate(-50%, -50%); /* Adjust the position of the pseudo-element */
-    border-radius: 50%;
-   
-}
-
-
-
-
-
-
-
 
 
 .digital {
-    width: 250px;
-    height: 100px;
-    background-color: rgb(255, 145, 0);
+    width: 80%;
+    background-color: rgb(225, 225, 225);
+    box-shadow: 0px 1px 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    font-size: 1rem;
+    gap: 5%;
+    font-size: 130%;
+    padding: 10% 0;
+    border-radius: 10px;
 }
 
 
@@ -213,8 +228,134 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40vw;
-    min-height: 90vh;
+    width: 40%;
+    min-height: 10%;
     gap: 1rem;
-    background-color: aqua;
+    background-color: rgb(205, 205, 205);
+    box-shadow: 0px 1px 5px;
+    border-radius: 10px;
+    font-size: 110%;
+}
+
+
+
+@media (max-width:1100px) {
+
+
+    .main {
+        width: 100%;
+        justify-content: space-around;
+        height: 100%;
+
+    }
+
+    .time {
+
+        justify-content: space-around;
+
+    }
+
+    .analog {
+        position: relative;
+        width: 25vh;
+        min-height: 25vh;
+
+
+    }
+
+}
+
+
+
+
+@media (max-width:768px) {
+
+
+
+    .main {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .time {
+
+        font-size: 0.8rem;
+        height: 100%;
+    }
+
+    .digital {
+        height: 10%;
+    }
+
+    .date {
+        padding: 10px;
+        font-size: 1rem;
+        height: 15%;
+    }
+}
+
+
+
+/* Mobile Device */
+
+
+
+@media (max-width:480px) {
+
+    .main {
+        flex-direction: column;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .time {
+        width: 100%;
+        justify-content: flex-start;
+        padding-top: 20%;
+        gap: 4rem;
+        height: 100vh;
+    }
+
+    .date {
+        position: absolute;
+        width: 80%;
+        bottom: 10%;
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-height:480px) and (max-width:2040px){
+
+
+
+    .main{
+        height: 110%;
+        margin-top: 5%;
+    }
+    .analog{
+        width:150px ;
+        height: 150px;
+        margin-bottom: 30px;
+    }
+
+    .hour-number span p {
+        font-size: 80%;
+     
+    }
+
+    .time{
+        margin-top: 10px;
+        height: 100vh;
+    }
+    .clock-center {
+       
+        height: 115%;
+        width: 115%;
+       
+    }
+
+
 }
